@@ -19,7 +19,7 @@ Fetch the sources down to the workspace:
 
 Build and flash the sample from the [zephyr] source tree:
 
-	west build -b heltec_wifi_lora32_v2 zephyr/samples/subsys/shell/shell_module/ -- -DDTC_OVERLAY_FILE=$PWD/esplorative-idiot/heltec_wifi_lora32_v2.overlay -DCONF_FILE=$PWD/esplorative-idiot/prj.conf
+	west build -b heltec_wifi_lora32_v2 zephyr/samples/subsys/shell/shell_module/ -- -DDTC_OVERLAY_FILE=$PWD/esplorative-idiot/heltec_wifi_lora32_v2.overlay -DOVERLAY_CONFIG=$PWD/esplorative-idiot/prj_sx12xx.conf
 	west flash
 
 ## PREREQUISITE
