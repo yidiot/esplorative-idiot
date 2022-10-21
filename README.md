@@ -17,9 +17,16 @@ Fetch the sources down to the workspace:
 	west init -m git@github.com:idiot-prototypes/esplorative-idiot
 	west update
 
-Build and flash the sample from the [zephyr] source tree:
+Build and flash the LoRa samples from the source tree:
 
-	west build -b heltec_wifi_lora32_v2 zephyr/samples/subsys/shell/shell_module/ -- -DDTC_OVERLAY_FILE=$PWD/esplorative-idiot/heltec_wifi_lora32_v2.overlay -DOVERLAY_CONFIG=$PWD/esplorative-idiot/prj_sx12xx.conf
+The *receiver* on one hand:
+
+	west build -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/receive/
+	west flash
+
+The *sender* on the other hand:
+
+	west build -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/send/
 	west flash
 
 ## PREREQUISITE
