@@ -58,6 +58,10 @@ void main(void)
 
 	cfb_framebuffer_clear(dev, true);
 
+	cfb_framebuffer_invert(dev);
+
+	cfb_framebuffer_finalize(dev);
+
 	display_blanking_off(dev);
 
 	rows = cfb_get_display_parameter(dev, CFB_DISPLAY_ROWS);
