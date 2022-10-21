@@ -1,10 +1,15 @@
 /*
  * Copyright (c) 2022 Gaël PORTAY
+ *               2019 PHYTEC Messtechnik GmbH
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
 / {
+	chosen {
+		zephyr,display = &ssd1306_ssd1306_128x64;
+	};
+
 	aliases {
 		lora0 = &lora0;
 	};
@@ -20,6 +25,24 @@
 			pinmux = <SPIM3_MOSI_GPIO27>;
 			output-low;
 		};
+	};
+};
+
+&arduino_i2c {
+	status = "okay";
+
+	ssd1306_ssd1306_128x64: ssd1306@3c {
+		compatible = "solomon,ssd1306fb";
+		reg = <0x3c>;
+		width = <128>;
+		height = <64>;
+		segment-offset = <0>;
+		page-offset = <0>;
+		display-offset = <0>;
+		multiplex-ratio = <63>;
+		segment-remap;
+		com-invdir;
+		prechargep = <0x22>;
 	};
 };
 
