@@ -21,13 +21,13 @@ Build and flash the LoRa samples from the source tree:
 
 The *receiver* on one hand:
 
-	west build -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/receive/
-	west flash
+	west build -d build/lora/receive -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/receive/
+	west flash -d build/lora/receive
 
 The *sender* on the other hand:
 
-	west build -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/send/
-	west flash
+	west build -d build/lora/send -b heltec_wifi_lora32_v2 esplorative-idiot/samples/drivers/lora/send/
+	west flash -d build/lora/send
 
 ## PREREQUISITE
 
