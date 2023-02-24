@@ -3,7 +3,7 @@
 esplorative-idiot is a throwaway repository to test the LoRa technology from
 within [zephyr].
 
-It intends to build a firmware to run on Heltec [WiFi LoRa 32 v2] boards.
+It intends to build a firmware to run on [Heltec WiFi LoRa 32 V2] boards.
 
 ## FETCH, BUILD AND FLASH
 
@@ -73,7 +73,7 @@ This program is licensed under the terms of the Apache License, version 2.0.
 
 [west]: https://github.com/zephyrproject-rtos/west
 [zephyr]: https://github.com/zephyrproject-rtos/zephyr
-[WiFi LoRa 32 v2]: https://heltec.org/project/wifi-lora-32/
+[Heltec WiFi LoRa 32 V2]: https://heltec.org/project/wifi-lora-32/
 [CMake package]: https://docs.zephyrproject.org/latest/build/zephyr_cmake_package.html#zephyr-cmake-package-export-west
 [toolchain]: https://docs.espressif.com/projects/esp-idf/en/v4.2/esp32/api-guides/tools/idf-tools.html#xtensa-esp32-elf
 [shell completion]: https://docs.zephyrproject.org/latest/develop/west/install.html#enabling-shell-completion
